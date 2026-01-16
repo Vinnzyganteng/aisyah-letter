@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <title>For Aisyah Princesza 💗</title>
 
-  <!-- Google Font Cute -->
+  <!-- Mobile Friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Cute Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
@@ -27,45 +30,34 @@
       overflow: hidden;
     }
 
-    /* Cute floating hearts */
-    .heart {
+    /* STIKER */
+    .sticker {
       position: absolute;
-      width: 40px;
-      height: 40px;
-      background: #ffc1d9;
-      transform: rotate(45deg);
-      animation: float 6s infinite ease-in-out;
-      opacity: 0.4;
+      width: 100px;
+      z-index: 5;
+      animation: floaty 5s ease-in-out infinite;
     }
 
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      background: #ffc1d9;
-      border-radius: 50%;
+    .sticker.melody {
+      top: -15px;
+      right: 20px;
     }
 
-    .heart::before {
-      top: -20px;
-      left: 0;
+    .sticker.sylvanian {
+      bottom: -10px;
+      left: 20px;
     }
 
-    .heart::after {
-      left: -20px;
-      top: 0;
+    .sticker.heart {
+      top: 45%;
+      right: -10px;
+      width: 70px;
     }
 
-    .heart.one { top: 10%; left: 5%; animation-delay: 0s; }
-    .heart.two { top: 60%; right: 5%; animation-delay: 2s; }
-    .heart.three { bottom: 10%; left: 40%; animation-delay: 4s; }
-
-    @keyframes float {
-      0% { transform: translateY(0) rotate(45deg); }
-      50% { transform: translateY(-20px) rotate(45deg); }
-      100% { transform: translateY(0) rotate(45deg); }
+    @keyframes floaty {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
     }
 
     h1 {
@@ -89,10 +81,6 @@
       margin-bottom: 18px;
     }
 
-    .emoji {
-      font-size: 20px;
-    }
-
     .signature {
       text-align: right;
       margin-top: 40px;
@@ -107,14 +95,32 @@
       font-size: 13px;
       color: #b96c85;
     }
+
+    /* IPHONE OPTIMIZATION */
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 25px;
+      }
+
+      .sticker {
+        width: 80px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <div class="heart one"></div>
-    <div class="heart two"></div>
-    <div class="heart three"></div>
+
+    <!-- STIKER -->
+    <img src="mymelody.png" class="sticker melody">
+    <img src="sylvanian.png" class="sticker sylvanian">
+    <img src="heart.png" class="sticker heart">
 
     <h1>Dear Aisyah Princesza 💕</h1>
 
@@ -123,7 +129,7 @@
 
       <p>Sebelumnya aku ingin meninta maaf karena tindakan aku sebelumnya karena aku yang ngga sengaja ngomong kalau semisal aku itu kalau lagi kayak gini pengennya waktu sendiri terus. Ngga sayang itu ngga bener, pada saat itu aku jujur lagi pusing banget kepala aku pusing terus nahan rasa sakit di kaki aku alhasil yang keluar seperti itu, aku udah mencoba sebisa mungkin untuk tidak mengeluarkan yang lebih parah dari itu karena aku tau aku salah.</p>
 
-      <p>Aku ngga bermaksud untuk bilang seperti itu, jujur ya aku mungkin memang ada saatnya butuh waktu sendiri, but ngga terus terusan kayak 3 hari beruntun ini ngga, waktu sendirinya aku itu di mana dalam satu hari misalnya aku ini pengen ngelakuin apa yang aku mau gitu tapi dalam kondisi kita tetep misalnya chattingan ngobrol segala macem, ngga kayak begini juga, menurut aku kalau kayak gini bukan waktu sendiri lagi tapi ini lebih ke diem dieman <span class="emoji">😔😔</span> soalnya kalau waktu sendiri itu kita tetep komunikasi. aku nge chat panjang lebar pun kamu ngga respon itu namanya kan diem dieman sayang?</p>
+      <p>Aku ngga bermaksud untuk bilang seperti itu, jujur ya aku mungkin memang ada saatnya butuh waktu sendiri, but ngga terus terusan kayak 3 hari beruntun ini ngga, waktu sendirinya aku itu di mana dalam satu hari misalnya aku ini pengen ngelakuin apa yang aku mau gitu tapi dalam kondisi kita tetep misalnya chattingan ngobrol segala macem, ngga kayak begini juga, menurut aku kalau kayak gini bukan waktu sendiri lagi tapi ini lebih ke diem dieman 😔😔 soalnya kalau waktu sendiri itu kita tetep komunikasi.</p>
 
       <p>Kalau waktu sendiri itu kita misalnya dalam satu hari ini kamu mau nonton dulu silahkann aku ga ganggu dulu but after that kita balik lagi kayak biasanya kita chattingan, ngobrol lagi atau gimanaa kann. Menurut aku waktu sendiri itu kayak begitu.</p>
 
@@ -135,8 +141,9 @@
     </div>
 
     <footer>
-      made with love, pink, and tiny hearts 🌸
+      made with love, pink, and you 🌸
     </footer>
+
   </div>
 
 </body>
